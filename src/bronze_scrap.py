@@ -32,6 +32,7 @@ while True:
         try:
             # Nombre de la tablet
             title = t.select_one(".caption a.title").get_text(strip=True)
+            print(title)
 
             # Precio
             price_raw = t.select_one(".caption .price span").get_text(strip=True)
