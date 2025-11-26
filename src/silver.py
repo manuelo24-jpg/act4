@@ -8,7 +8,7 @@ books   = spark.read.parquet("bronze/tablets")
 
 
 books = (books
-    .withColumn("precio",   col("price").cast(DoubleType()))
+    .withColumn("precio", col("price").cast(DoubleType()))
 )
 
 books.write.mode("overwrite").parquet("silver/tablets")
